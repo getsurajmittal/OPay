@@ -25,7 +25,7 @@ export const timelineData = [
   {
     type: "Project",
     icon: "Code2",
-    title: "Offline Payment System",
+    title: "OPay",
     institution: "Personal Project",
     period: "2023",
     details: [

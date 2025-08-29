@@ -66,12 +66,18 @@ export default function Chatbot() {
       style={{ height: chatHeight }}
     >
       {/* Header */}
-      <div className="bg-indigo-600 text-white p-1 font-bold text-center flex justify-between items-center cursor-pointer"
-           onClick={() => setIsOpen(!isOpen)}
+      <div
+        className="bg-indigo-600 text-white p-1 font-bold text-center flex justify-between items-center cursor-pointer"
+        onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? "Ask me about my skills, projects or experiences" : "Hi, let's chat"}
+        {isOpen
+          ? "Ask me about my skills, projects or experiences"
+          : "Hi, let's chat"}
         <button
-          onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}
+          onClick={(e) => {
+            e.stopPropagation();
+            setIsOpen(false);
+          }}
           className="ml-2 text-white font-bold text-lg"
         >
           ✕

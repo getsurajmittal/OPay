@@ -1,14 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {
+  Inter as Geist,
+  Source_Code_Pro as Geist_Mono,
+} from "next/font/google";
 import "./globals.css";
+import ThemeProviderClient from "./ThemeProviderClient";
 
 const geistSans = Geist({
+  subsets: ["latin"],
   variable: "--font-geist-sans",
-  subsets: ["latin"],
 });
-
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: "--font-geist-mono",
 });
 
 export const metadata = {
@@ -18,11 +21,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-black dark:bg-black dark:text-white transition-colors duration-300`}
       >
-        {children}
+        <ThemeProviderClient>{children}</ThemeProviderClient>
       </body>
     </html>
   );

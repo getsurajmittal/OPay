@@ -20,15 +20,26 @@ export default function Projects() {
             transition={{ duration: 0.8, delay: index * 0.2 }}
           >
             <img
-              src={project.image}
+              src={
+                project.image.startsWith("/")
+                  ? project.image
+                  : `/${project.image}`
+              }
               alt={project.title}
               className="rounded-lg mb-4 object-cover h-48 w-full"
             />
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{project.title}</h3>
-            <p className="text-gray-700 dark:text-gray-300 mb-3">{project.description}</p>
+            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              {project.title}
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-3">
+              {project.description}
+            </p>
             <div className="flex flex-wrap gap-2 mb-3">
               {project.techStack.map((tech, i) => (
-                <span key={i} className="bg-indigo-200 text-indigo-800 dark:bg-indigo-600 dark:text-white px-2 py-1 rounded-full text-sm">
+                <span
+                  key={i}
+                  className="bg-indigo-200 text-indigo-800 dark:bg-indigo-600 dark:text-white px-2 py-1 rounded-full text-sm"
+                >
                   {tech}
                 </span>
               ))}
