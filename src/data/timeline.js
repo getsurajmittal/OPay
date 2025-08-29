@@ -13,25 +13,25 @@ export const timelineData = [
   {
     type: "Experience",
     icon: "Briefcase",
+    title: "DevOps Intern",
+    institution: "Brane Enterprises, Bangalore",
+    period: "2023 – 2024",
+    details: [
+      "Deployed and managed applications on AWS, improving infrastructure setup time",
+      "Set up CI/CD pipelines, reducing manual deployment effort by 20%",
+      "Containerized services with Docker and Kubernetes simplifying staging/test deployments"
+    ]
+  },
+  {
+    type: "Experience",
+    icon: "Briefcase",
     title: "Software Engineer",
     institution: "Adtran",
     period: "2024 – Present",
     details: [
-      "Built backend services in Java & Spring Boot",
-      "Optimized database queries reducing latency by 40%",
-      "Developed fullstack features in React/Next.js"
-    ]
-  },
-  {
-    type: "Project",
-    icon: "Code2",
-    title: "OPay",
-    institution: "Personal Project",
-    period: "2023",
-    details: [
-      "Designed an offline payment solution in Java",
-      "Implemented transaction syncing when internet is available",
-      "Hosted on GitHub with detailed documentation"
+      "Automated developer documentation with Docusaurus, reducing manual effort by 50%",
+      "Engineered CI/CD pipelines with Jenkins & Docker, cutting release times and improving reliability",
+      "Led Ubuntu 22.04 platform migration for core products, debugging system-level issues and ensuring 100% service compatibility."
     ]
   }
 ];
